@@ -96,10 +96,10 @@
             </GroupBox>
         </StackPanel>
         <DockPanel x:Name="AreaPrincipale">
-            <ListBox DockPanel.Dock="Left" Width="160" x:Name="lstStudenti" Visibility="Collapsed" BorderBrush="Black"/>
+            <ListBox DockPanel.Dock="Left" Width="160" x:Name="lstStudenti" SelectionChanged ="lstStudenti_SelectionChanged"  Visibility="Collapsed" BorderBrush="Black"/>
             <StackPanel Orientation="Vertical" DockPanel.Dock="Right">
                 <TextBox x:Name="txtFiltroComputer" TextChanged="txtFiltroComputer_TextChanged"/>
-                <ListBox  Width="160" x:Name="lstComputer" Visibility="Collapsed" BorderBrush="Black"/>
+                <ListBox  Width="160" x:Name="lstComputer" SelectionChanged="lstComputer_SelectionChanged" Visibility="Collapsed" BorderBrush="Black"/>
             </StackPanel>
             <Canvas x:Name="AreaDisegno" VerticalAlignment="Top" Background="White">
                 <!--ViewBox per il ridimensionamento del testo-->

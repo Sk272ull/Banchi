@@ -26,6 +26,9 @@ namespace Banchi
         List<Classe> listaClassiModello;
         List<Computer> listaComputer;
 
+        private string studentePerTextBlock;
+        private string computerPerTextBlock;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -352,5 +355,25 @@ namespace Banchi
         {
 
         }
+
+       
+
+        private void lstStudenti_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            lstStudenti.SelectionChanged -= lstStudenti_SelectionChanged;
+            txtStudente.Text = studentePerTextBlock;
+        }
+
+
+        private void lstComputer_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            lstComputer.SelectionChanged -= lstComputer_SelectionChanged;
+            txtComputer.Text = studentePerTextBlock;
+
+        }
+
+
     }
+
+      
 }
